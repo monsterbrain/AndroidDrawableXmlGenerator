@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Android Drawable Generator 0.1</title>
+    <link rel="stylesheet" href="bulma.css" />
+    <style>
+      .dropArea {
+        min-height: 150px;
+        width: 250px;
+        border: 1px solid blue;
+        margin: 10px;
+        padding: 10px;
+      }
+      .imgHolder {
+        width: 100%;
+        height: auto;
+        text-align: center;
+      }
+      .imgHolder > .preview {
+        height: 128px;
+        width: auto;
+      }
+
+      .finalPreview {
+        height: 128px;
+        width: auto;
+      }
+    </style>
+  </head>
+  <body>
+  <!-- credits -->
+  <!-- https://codepen.io/esausilva/pen/RKVoQw -->
+  <!-- Jquery, Bulma, FileSaver.js -->
+    <div class="container">
+      <section class="hero is-dark">
+        <div class="hero-body">
+          <div class="container">
+            <p class="title">
+              Android Drawable Xml Generator
+            </p>
+            <p class="subtitle">
+              generate state list / animated sequence android drawables
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="title h2">Drawable List</div>
+
+      <div class="columns">
+        <div class="column">
+          Default Drawable
+          <div class="dropArea">
+            drop files here
+            <div class="imgHolder">
+              <img
+                class="preview default"
+                src="placeholder.png"
+                alt=""
+                srcset=""
+              />
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          Pressed Drawable
+          <div class="dropArea">
+            drop files here
+            <div class="imgHolder">
+              <img
+                class="preview pressed"
+                src="placeholder.png"
+                alt=""
+                srcset=""
+              />
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <!-- Third column -->
+        </div>
+        <div class="column">
+          <!-- Fourth column -->
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column">
+            <h4 style="text-align: center;" class="h4">Final Preview</h4>
+          
+          <div class="imgHolder">
+            <img class="finalPreview" src="placeholder.png" alt="" srcset="" />
+          </div>
+        </div>
+
+        
+      </div>
+
+      <div class="columns">
+        <div class="column" style="text-align: center;">
+            <input id="fileNameInput" class="input" type="text" placeholder="drawable_file_name.xml" style="width: 256px;">
+            <button id="generateBtn" class="button is-dark">generate xml</button>
+        </div>
+          </div>
+    </div>
+
+    <script src="FileSaver.js"></script>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
